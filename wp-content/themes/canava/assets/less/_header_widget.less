@@ -1,0 +1,108 @@
+.header-v4 {
+	#site-header {
+		#headerbar {
+			color: @white;
+			.social-links {
+				a {
+					color: rgba(0,0,0,.25);
+					&:hover {
+						color: @white;
+					}
+				}
+			}
+			.custom-info i {
+				background: @white;
+				text-shadow:none;
+			}
+		}
+		#masthead {
+			#site-brand {
+				padding-bottom: 30px;
+				.wrapper {
+					.header-widgets {
+						float: right;
+						margin: 29px 0;
+						&:after {
+							clear: both;
+							content: "";
+							display: block;
+						}
+						.widget {
+							float: right;
+							margin: 0 0 0 50px;
+							&:last-child {
+								margin: 0;
+							}
+							.info-icon {
+								line-height: 1.4;
+								&:after {
+									clear: both;
+									content: "";
+									display: block;
+								}
+								i {
+									float: left;
+									margin-right: 15px;
+									margin-top: 3px;
+									font-size: 28px;
+								}
+								.content {
+									float: right;
+								}
+							}
+						}
+					}
+				}
+			}
+			#site-navigator {
+				float: none;
+				position: absolute;
+				width: 100%;
+				margin-top: -30px;
+				.wrapper {
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+				.menu {
+					> li {
+						> a {
+							color: rgba(255,255,255,0.6);
+							padding-top: 17px;
+							padding-bottom: 16px;
+						}
+						&:hover {
+							> a {
+								color: @white;
+							}
+						}
+					}
+					> .current-menu-item,
+					> .current-menu-ancestor {
+						a {
+							color: @white;
+						}
+						&:after {
+							color: @white;
+						}
+					}
+					&.menu-extra .shopping-cart > a .shopping-cart-items-count {
+						top: 15px;
+					}
+				}
+
+				&.stick {
+					position: fixed;
+					width: inherit;
+					top: 0;
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	#site-content #page-header {
+		padding-top: 95px;
+	}
+}
+.admin-bar.header-v4 #site-header #masthead #site-navigator.stick {
+	top: 32px;
+}
